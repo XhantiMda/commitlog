@@ -2,9 +2,8 @@ package server
 
 import (
 	"encoding/json"
-	"net/http"
-
 	"github.com/gorilla/mux"
+	"net/http"
 )
 
 func NewHttpServer(address string) *http.Server {

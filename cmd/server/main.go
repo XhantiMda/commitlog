@@ -1,9 +1,8 @@
 package main
 
 import (
-	"log"
-
 	"github.com/xhantimda/commitlog/internal/server"
+	"log"
 )
 
 func main() {
