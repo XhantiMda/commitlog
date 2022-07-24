@@ -12,6 +12,9 @@ var (
 	width = uint64(len(write)) + lenWidth
 )
 
+//In this test, we create a store with a temporary file and call two test helpers
+//to test appending and reading from the store.
+//Then we create the store again to test is it recovers its state after restarting.
 func TestStoreAppendRead(t *testing.T) {
 
 	file, err := ioutil.TempFile("", "store_append_read_test")
@@ -32,6 +35,7 @@ func TestStoreAppendRead(t *testing.T) {
 	testRead(t, store)
 }
 
+//
 func testAppend(t *testing.T, store *store) {
 
 	t.Helper()
