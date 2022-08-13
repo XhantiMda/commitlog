@@ -8,5 +8,4 @@ import (
 func main() {
 	localServer := server.NewHttpServer(":8080")
 	log.Fatal(localServer.ListenAndServe())
-
 }

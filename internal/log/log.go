@@ -1,7 +1,6 @@
 package log
 
 import (
-	"fmt"
 	api "github.com/xhantimda/commitlog/api/v1"
 	"io"
 	"io/ioutil"
@@ -110,8 +109,9 @@ func (log *Log) Read(offset uint64) (*api.Record, error) {
 			break
 		}
 	}
+
 	if seg == nil || seg.nextOffset <= offset {
-		return nil, fmt.Errorf("offset out of range: %d", offset)
+		return nil, api.ErrOffsetOutOfRange{Offset: offset}
 	}
 
 	return seg.Read(offset)
