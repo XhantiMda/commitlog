@@ -1,0 +1,16 @@
+{
+  "CN": "My Awesome CA",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "RSA",
+      "L": "Cape Town",
+      "ST": "Western Cape",
+      "O": "Space",
+      "OU": "Engineering"
+    }
+  ]
+}
